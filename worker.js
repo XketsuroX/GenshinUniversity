@@ -81,7 +81,7 @@ export default {
             /* URL don't exist */
             return new Response(
                 html_template,
-                html_header
+                Object.assign({}, html_header, {"status": 404})
             );
         }
     }
